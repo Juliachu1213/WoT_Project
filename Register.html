@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="Register.css">
+    
+    <script>
+        const socket = io();
+        function onBtnClicked() {
+            let value_machine = document.querySelector('input[name="machine"]:checked').value
+            let value_username = document.getElementById('username').value;
+
+            console.log(value_machine);
+            console.log(value_username);
+            if(value_username != ""){
+            socket.emit('directive',
+            {machine : value_machine, username : value_username});
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <form>
+        請選擇要排隊的洗衣機：<br>
+        <input id="machine" name="machine" type="radio" value="machine1" required />洗衣機1
+        <input id="machine" name="machine" type="radio" value="machine2"/>洗衣機2<br>
+    <br>
+        請輸入使用者暱稱：<br>
+        <input id="username" type="text" placeholder="請輸入使用者名稱" required /><br>
+    <button id="btn" onclick="onBtnClicked()">確認</button>
+    </form>
+    
+</body>
+</html>

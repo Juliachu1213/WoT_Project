@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Screen</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@latest/lib/addons/p5.sound.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/planck@latest/dist/planck.min.js"></script>
+    <script src="https://p5play.org/v3/p5.play.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="Screen.css">
+</head>
+<body>
+    <script src="/Screen.js"></script>
+    <div id="wrap_layer1"></div> 
+    <div id="wrap_layer2">
+        <div id="laundry1_wrap">
+            <div id="timer1"></div>
+            <div id="laundry1"></div>
+            <div id="text_box_wrap">
+                <div class="text_box">
+                    <div class="text">使用者 : </div>
+                    <div id="laundry1_user1"></div>
+                </div>
+                <div id="seperation_line"></div>
+                <div class="text_box">
+                    <div class="text">排隊第1順位 : </div>
+                    <div id="laundry1_user2"></div>
+                </div>
+                <div id="seperation_line"></div>
+                <div class="text_box">
+                    <div class="text">排隊第2順位 : </div>
+                    <div id="laundry1_user3"></div>
+                </div>
+            </div>
+            <div class="button_box">
+                <button type="button" onclick="Register_Window()">排隊</button>
+                <button type="button" onclick="laundry1Finish()">結束</button>
+            </div>
+        </div>
+        <div id="typesetting_block"></div>
+        <div id="laundry2_wrap">
+            <div id="timer2"></div>
+            <div id="laundry2"></div>
+            <div id="text_box_wrap">
+                <div class="text_box">
+                    <div class="text">使用者 : </div>
+                    <div id="laundry2_user1"></div>
+                </div>
+                <div id="seperation_line"></div>
+                <div class="text_box">
+                    <div class="text">排隊第1順位 : </div>
+                    <div id="laundry2_user2"></div>
+                </div>
+                <div id="seperation_line"></div>
+                <div class="text_box">
+                    <div class="text">排隊第2順位 : </div>
+                    <div id="laundry2_user3"></div>
+                </div>
+            </div>    
+            <div class="button_box">
+                <button type="button" onclick="Register_Window()">排隊</button>
+                <button type="button" onclick="laundry2Finish()">結束</button>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>
